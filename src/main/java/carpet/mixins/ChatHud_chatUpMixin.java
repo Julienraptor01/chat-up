@@ -22,6 +22,7 @@ public class ChatHud_chatUpMixin
         if(player == null || player.isCreative() || player.isSpectator()) return 0;
         int offset = player.getArmor()>0?10:0;
         if(player.getAbsorptionAmount()>0) offset += 10;
+        if(player.getMaxHealth() > 20) offset += 10;
         return offset;
     }
 
